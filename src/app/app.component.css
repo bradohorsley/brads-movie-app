@@ -5,3 +5,5 @@ p {
 mat-sidenav-container { min-height: 100vh; }
 
 mat-sidenav { width: 70% }
+
+#router-container { width: 95%; margin: 0 auto; }

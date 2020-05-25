@@ -13,7 +13,6 @@ import {MatListModule} from '@angular/material/list';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { TestComponent } from './test/test.component';
 import { StaticPageComponent } from './static-page/static-page.component';
 
 @NgModule({
@@ -29,7 +28,7 @@ import { StaticPageComponent } from './static-page/static-page.component';
    MatSidenavModule,
    MatListModule,
   ],
-  declarations: [ AppComponent, HomeComponent, TestComponent, StaticPageComponent ],
+  declarations: [ AppComponent, HomeComponent, StaticPageComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

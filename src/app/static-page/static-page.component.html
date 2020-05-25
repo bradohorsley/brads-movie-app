@@ -1,6 +1,7 @@
+<h2>{{page.title}}</h2>
 <p>
-static-page works!
+  {{page.slug}}
 </p>
-<p>
-  {{slug}}
+<p *ngFor="let para of page.content">
+  {{para}}
 </p>

@@ -4,5 +4,7 @@ export interface MenuItems {
 }
 export const MENU: any = [
   { text: 'Home', link: '/' },
-  { text: 'Test', link: '/page/test'}
+  { text: 'Test', link: '/page/test'},
+  { text: 'About', link: '/page/about-us' },
+  { text: 'Home 2', link: '/page/index' },
 ]

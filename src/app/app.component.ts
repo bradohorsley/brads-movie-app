@@ -7,5 +7,7 @@ import { MenuItems, MENU } from './assets/menu-data';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
+
+  
   menu: MenuItems[] = MENU;
 }

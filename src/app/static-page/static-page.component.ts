@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { MyPages, PAGES } from '../assets/page-data'
 
 @Component({
   selector: 'app-static-page',
@@ -7,7 +8,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./static-page.component.css']
 })
 export class StaticPageComponent implements OnInit {
-slug: string;
+page;
+pages: MyPages[] = PAGES;
 
   constructor(
     private route: ActivatedRoute
@@ -15,7 +17,8 @@ slug: string;
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-    this.slug = params.get('pageSlug');
+    this.page = this.pages.find(p => p.slug == params.get('slug'));
+
   });
   }
 
