@@ -10,7 +10,6 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 
 import { AppComponent } from './app.component';
-import { PagesComponent } from './pages/pages.component';
 
 @NgModule({
   imports:      [ 
@@ -24,7 +23,7 @@ import { PagesComponent } from './pages/pages.component';
    MatSidenavModule,
    MatListModule,
   ],
-  declarations: [ AppComponent, PagesComponent ],
+  declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
