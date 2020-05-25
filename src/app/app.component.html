@@ -5,12 +5,9 @@
       <h2>Menu</h2>
     </mat-toolbar>
     <mat-list>
-      <mat-list-item>
-        <p>Menu Item 1</p>
-      </mat-list-item>
+      <mat-list-item *ngFor="let menu of item">
+        <p><a (click)="sidenav.toggle()" [routerLink]="['/']">item.tex</a></p>
       <mat-divider></mat-divider>
-      <mat-list-item>
-        <p>Menu Item 2</p>
       </mat-list-item>
     </mat-list>
   </mat-sidenav>
@@ -19,7 +16,7 @@
   <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
   <h1>Movies!</h1>
 </mat-toolbar>
-
+  <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
 
