@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import {Observable} from 'rxjs';
-import { MoviesService } from '../movies.service';
 
 export interface moviePage {
   "adult": boolean;
@@ -32,30 +30,20 @@ export interface moviePage {
   "vote_count": number;
 }
 
-@Component({
-  selector: 'app-movie-page',
-  templateUrl: './movie-page.component.html',
-  styleUrls: ['./movie-page.component.css']
+@Injectable({
+  providedIn: 'root',
 })
-export class MoviePageComponent implements OnInit {
-id;
+export class MoviesService {
 
-movie$: Observable<moviePage[]>;
-
-  constructor(
-    private route: ActivatedRoute,
-    private moviesService: MoviesService,
-    ) { }
-
-  ngOnInit() {
-
-    this.route.paramMap.subscribe(params => this.id = params.get('movieId') );
-
-
-
-this.movie$ = this.moviesService.getMovie(this.id);
-
-
+  constructor(private http: HttpClient,) { 
+    
   }
+
+getMovie(movieId: string): Observable<moviePage[]> {
+const params = new HttpParams()
+.set('api_key','305369f837dc51bc34b984b5287ba22e');
+
+return this.http.get<moviePage[]>('https://api.themoviedb.org/3/movie/' + movieId,{params});
+}
 
 }

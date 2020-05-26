@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { StaticPageComponent } from './static-page/static-page.component';
 import { MoviePageComponent } from './movie-page/movie-page.component';
+import { MoviesService } from './movies.service';
 
 @NgModule({
   imports:      [ 
@@ -30,6 +31,7 @@ import { MoviePageComponent } from './movie-page/movie-page.component';
    MatListModule,
   ],
   declarations: [ AppComponent, HomeComponent, StaticPageComponent, MoviePageComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [MoviesService]
 })
 export class AppModule { }
