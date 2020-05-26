@@ -7,4 +7,5 @@ export const MENU: any = [
   { text: 'Test', link: '/page/test'},
   { text: 'About', link: '/page/about-us' },
   { text: 'Home 2', link: '/page/index' },
+  { text: 'Fight Club', link: '/movie/550' },
 ]

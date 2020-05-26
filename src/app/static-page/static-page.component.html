@@ -1,3 +1,4 @@
+<div *ngIf="page; else notFound">
 <h2>{{page.title}}</h2>
 <p>
   {{page.slug}}
@@ -5,3 +6,7 @@
 <p *ngFor="let para of page.content">
   {{para}}
 </p>
+</div>
+<ng-template #notFound>
+<h2>We Can't Find that Page</h2>
+</ng-template>

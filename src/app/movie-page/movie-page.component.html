@@ -1,0 +1,10 @@
+<div *ngIf="(movie$ | async); else notFound">
+<h2>
+  {{(movie$ | async).title}}
+</h2>
+<img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{(movie$ | async).poster_path}}">
+</div>
+
+<ng-template #notFound>
+<p>Not Found</p>
+</ng-template>

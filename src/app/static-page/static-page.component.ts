@@ -18,8 +18,8 @@ pages: MyPages[] = PAGES;
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
     this.page = this.pages.find(p => p.slug == params.get('slug'));
-
   });
+  console.log(this.page);
   }
 
 }
